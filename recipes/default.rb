@@ -90,7 +90,7 @@ end
 
 #Copy ngingx.conf
 template "/etc/nginx/nginx.conf" do
-  source "nginx.conf.j2.erb"
+  source "nginx.conf.erb"
   variables({
     :hostname => node['nginx-naxsi']['hostname'],
     :backend_server => node['nginx-naxsi']['backend_server'] ,
